@@ -41,11 +41,14 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-        {
-           data.map((item, index) => (
-               <div key={index}>{item.id}</div>
-           ))
-        }
+        <ul>
+            {data.map((item, index) => (
+                <li key={index}>
+                    {item.id} - {item.name}
+                </li>
+            ))}
+        </ul>
+
     </>
   )
 }
