@@ -1,12 +1,25 @@
-import {useEffect, useState} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+
 import './App.css'
-import axios from 'axios'
+import Home from "./features/home/component/Home.tsx";
+import LoginPage from "./features/auth/pages/LoginPage.tsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<LoginPage />} />
+                <Route path="/Home" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+    )
+
+
+
+
+  /*const [count, setCount] = useState(0)
   const [data, setData] = useState<Item[]>([])
 
     type Item = {
@@ -50,7 +63,7 @@ function App() {
         </ul>
 
     </>
-  )
+  )*/
 }
 
 export default App
