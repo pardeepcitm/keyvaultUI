@@ -13,7 +13,7 @@ const Home = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await api.get("/Profile/me");
+                const response = await api.get("/orders/api/Profile/me");
                 setProfile(response.data);
             } catch (err) {
                 console.error("Failed to load profile", err);

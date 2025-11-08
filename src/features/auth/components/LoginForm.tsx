@@ -19,7 +19,7 @@ const LoginForm = () => {
         e.preventDefault();
 
         try {
-            const response = await api.post("/Auth/login", formData);
+            const response = await api.post("/Auth/api/Auth/login", formData);
 
             const token = response.data.token;
 
